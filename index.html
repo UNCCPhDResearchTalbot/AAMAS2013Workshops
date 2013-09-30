@@ -1,0 +1,53 @@
+<html>
+	<head>
+		<script src="jsGameSoup-v275/js/jsgamesoup.js"></script>
+		<script src="main.js"></script>
+	</head>
+	<body>
+		<script type="text/JavaScript">
+            <!--
+            function timedRefresh(timeoutPeriod) {
+                setTimeout("location.reload(true);", timeoutPeriod);
+            }
+
+            //   -->
+		</script>
+		<!--<table border="1" width="100%" height="100%" cellpadding="10" >
+			<colgroup>
+				<col width="10%" />
+				<col width="90%" />
+			</colgroup>
+			<tr height="80%">
+				<td colspan="2">-->
+				<center>
+					<div id="canvascontainer">
+						<canvas id='canvas' jsgs='startGame' fps="25" style="border:solid 1px #000000" width="1060" height="916">
+
+							Your browser does not support the canvas element.
+						</canvas>
+
+					</div>
+				</center><!--</td>
+			</tr>
+
+		</table>-->
+
+		<form>
+			<!--<input id="humanx" >
+			<input id="humany" name="humany" type="text" value="99" >
+			<input type="button" onclick="sethuman();" value="Move">-->
+			<input type="button" onclick="randomizefile();"  value="CreateRandomFile"><input type="button" onclick="recalculate();" value="Calculate Positions">
+		</form>
+		<form>
+			<input type="file" id="files" name="files[]" multiple />
+			<!--input type="button" onclick="handleFileSelect();" value="Load"-->
+			<script>
+                document.getElementById('files').addEventListener('change', handleFileSelect, false);
+                //document.getElementById('humanx').addEventListener('change', null, true);
+			</script>
+		</form>
+		<form>
+			<input type="button" onclick="timedRefresh(1000);" value="Reset">
+		</form>
+	</body>
+</html>
